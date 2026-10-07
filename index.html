@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'">
+<title>JOÁ · Painel</title>
+<link rel="stylesheet" href="app.css?v=135a236471">
+<script src="tema.js?v=135a236471"></script>
+</head>
+<body>
+<main class="login" id="login" hidden>
+  <div class="card">
+    <h1>JOÁ <span>· Painel</span></h1>
+    <form id="f-email" novalidate>
+      <p>Digite seu e-mail para receber um código de acesso.</p>
+      <label for="email">E-mail</label>
+      <input id="email" type="email" autocomplete="email" inputmode="email" required>
+      <button class="btn" type="submit">Enviar código</button>
+    </form>
+    <form id="f-codigo" novalidate hidden>
+      <p id="txt-codigo">Se este e-mail tiver acesso, você vai receber um código em instantes.</p>
+      <label for="codigo">Código de 6 dígitos</label>
+      <input id="codigo" class="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" required>
+      <button class="btn" type="submit">Entrar</button>
+      <button class="link" type="button" id="voltar">Usar outro e-mail</button>
+    </form>
+    <div class="msg" id="msg" role="status"></div>
+    <div class="rodape">Agência Prime Place</div>
+  </div>
+</main>
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <h1>JOÁ <span id="titulo-mod"></span></h1>
+    <div class="hd-dir">
+      <div class="upd"><i class="dot" id="dot"></i><span id="upd">carregando…</span></div>
+      <button class="ic" id="btn-acesso" type="button" title="Acesso (usuários)" aria-label="Gerenciar acesso" hidden>👥</button>
+      <button class="ic" id="btn-tema" type="button" title="Tema" aria-label="Alternar tema">◐</button>
+      <button class="ic" id="btn-sair" type="button" title="Sair" aria-label="Sair">⏻</button>
+    </div>
+  </header>
+  <nav class="mods" id="mods" hidden></nav>
+  <nav class="tabs" id="tabs"></nav>
+  <div id="aviso" class="aviso" hidden></div>
+  <div id="body"></div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script src="config.js?v=135a236471"></script>
+<script src="app.js?v=135a236471"></script>
+</body>
+</html>
